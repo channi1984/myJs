@@ -82,3 +82,33 @@
 // var arr = [1, 2, 3, 4];
 // console.log(arr.join());
 // console.log(arr.join('+'));
+
+
+//기존 ajax 통신코드
+// function getDate(callbackFunc) {
+//     $.get('url주소/products/1', function (response) {
+//         callbackFunc(response);
+//     });
+// }
+
+// getData(function (tableData) {
+//     console.log(tableData);
+// })
+
+//프로미스를 통한 ajax 통신
+// function getData() {
+//     return new Promise(function (resolve, reject) {
+//         $.get('url주소/product/1', function (response) {
+//             if (response) {
+//                 resolve(response);
+//             }
+//             reject(new Error("Request is failed"));
+//         });
+//     });
+// }
+
+// getData().then(function (data) {
+//     console.log(data);
+// }).catch(function (err) {
+//     console.error(err);
+// })
