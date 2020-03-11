@@ -112,3 +112,44 @@
 // }).catch(function (err) {
 //     console.error(err);
 // })
+
+// const myArray = [1,2,3,4];
+
+// const myArrayTimesTwo = myArray.map((value, index, array) => {
+//     return value * 2;
+// });
+
+// console.log(myArray);
+// console.log(myArrayTimesTwo);
+
+// const songs = [
+//     { id: 1, name: "Curl of the Burl", artist: 'Mastodon' },
+//     { id: 1, name: "Oblivion", artist: 'Mastodon' },
+//     { id: 1, name: "Flying Whales", artist: 'Gojira' },
+//     { id: 1, name: "L'Enfant Sauvage", artist: 'Gojira' },
+// ]
+
+// var allSongNames = songs.map(function(song){
+//     return song.name.toLowerCase();
+// })
+
+// console.log(allSongNames);
+
+// const myArray = [1,2,3,4];
+
+// const myEvenArray = myArray.filter((value, index, array) => {
+//     return value % 2 === 0;
+// });
+
+// console.log(myArray);
+// console.log(myEvenArray);
+
+const myArray = [1,2,3,4];
+
+const sum =myArray.reduce((acc, currValue, currIndex, array) => {
+    return acc + currValue;
+}, 0);
+
+const avg = sum / myArray.length;
+
+console.log(avg);
