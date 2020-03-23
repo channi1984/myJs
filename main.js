@@ -1,5 +1,4 @@
-//배열 메소드
-
+// //배열 메소드
 // var arr = [1,2,3,4];
 // arr.pop();
 // console.log(arr);
@@ -84,7 +83,7 @@
 // console.log(arr.join('+'));
 
 
-//기존 ajax 통신코드
+// //기존 ajax 통신코드
 // function getDate(callbackFunc) {
 //     $.get('url주소/products/1', function (response) {
 //         callbackFunc(response);
@@ -95,7 +94,7 @@
 //     console.log(tableData);
 // })
 
-//프로미스를 통한 ajax 통신
+// //프로미스를 통한 ajax 통신
 // function getData() {
 //     return new Promise(function (resolve, reject) {
 //         $.get('url주소/product/1', function (response) {
