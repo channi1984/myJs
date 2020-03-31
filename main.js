@@ -152,3 +152,21 @@
 // const avg = sum / myArray.length;
 
 // console.log(avg);
+
+
+// //Apply , Call
+// obj1 = {
+//     name: 'WEB',
+//     getName : function() {
+//         return this.name;
+//     }
+// }
+
+// obj2 = {
+//     name: 'FREE',
+//     getName: function() {
+//         return this.name;
+//     }
+// }
+// obj1.getName();
+// obj1.getName.call(obj2)
