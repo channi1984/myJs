@@ -80,9 +80,9 @@ var isEven = function (value) {
     return value % 2 === 0;
 }
 var newArr = arr.map(isEven);
-var newArr2 = arr.filter(isEven);
 console.log(newArr);
 //[false, true, false, true, false, true, false, true, false, true]
+var newArr2 = arr.filter(isEven);
 console.log(newArr2);
 //[2, 4, 6, 8, 10]
 
@@ -155,13 +155,12 @@ console.log(arr.join('+'));
 // })
 
 const myArray = [1, 2, 3, 4];
+console.log(myArray);
+//[1, 2, 3, 4]
 
 const myArrayTimesTwo = myArray.map((value, index, array) => {
     return value * 2;
 });
-
-console.log(myArray);
-//[1, 2, 3, 4]
 console.log(myArrayTimesTwo);
 //[2, 4, 6, 8]
 
@@ -180,13 +179,12 @@ console.log(allSongNames);
 //["curl of the burl", "oblivion", "flying whales", "l'enfant sauvage"]
 
 const myArray2 = [1, 2, 3, 4];
+console.log(myArray2);
+//[1, 2, 3, 4]
 
 const myEvenArray = myArray2.filter((value, index, array) => {
     return value % 2 === 0;
 });
-
-console.log(myArray2);
-//[1, 2, 3, 4]
 console.log(myEvenArray);
 //[2, 4]
 
@@ -216,5 +214,10 @@ obj2 = {
         return this.name;
     }
 }
-obj1.getName();
-obj1.getName.call(obj2);
+var result1 = obj1.getName();
+console.log(result1)
+//WEB
+
+var result2 = obj1.getName.call(obj2);
+console.log(result2)
+//FREE
