@@ -125,6 +125,37 @@ console.log(arr.join('+'));
 //1+2+3+4
 
 
+//비구조화 할당
+var [a1, a2, ...rest_a] = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(a1);
+//1
+console.log(a2);
+//2
+console.log(rest_a);
+//[3, 4, 5, 6, 7, 8, 9]
+
+var { a1, a2, ...rest_a } = { a1: 10, a2: 20, a3: 30, a4: 40 };
+console.log(a1);
+//10
+console.log(a2);
+//20
+console.log(rest_a);
+//{a3: 30, a4: 40}
+
+let pre = ["apply", "orange", 100];
+let newData = [...pre];
+console.log(pre);
+//["apply", "orange", 100]
+console.log(newData);
+//["apply", "orange", 100]
+console.log(newData === pre);
+//false
+
+let pre2 = [100, "hello", null];
+let newData2 = [0, 10, ...pre, 4];
+console.log(newData2);
+//[0, 10, "apply", "orange", 100, 4]
+
 //기존 ajax 통신코드
 // function getDate(callbackFunc) {
 //     $.get('url주소/products/1', function (response) {
