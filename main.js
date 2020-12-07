@@ -1,4 +1,4 @@
-//커링예제11111
+//커링예제
 var sumCurry = function (a, b) {
     return a + b;
 }
