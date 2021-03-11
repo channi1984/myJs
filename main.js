@@ -114,7 +114,7 @@ var arr = [1, 2, 3, 4];
 
 //비구조화 할당
 var [a1, a2, ...rest_a] = [1, 2, 3, 4, 5, 6, 7, 8];
-// console.log(a1);
+//console.log(a2);
 // console.log(a2);
 // console.log(rest_a);
 
@@ -123,6 +123,7 @@ var { a1, a2, ...rest_a } = { a1: 10, a2: 20, a3: 30, a4: 40 };
 // console.log(a2);
 // console.log(rest_a);
 
+//전개연산자
 let pre = ["apply", "orange", 100];
 let newData = [...pre];
 // console.log(pre);
@@ -130,7 +131,7 @@ let newData = [...pre];
 // console.log(newData === pre);
 
 let pre2 = [100, "hello", null];
-let newData2 = [0, 10, ...pre, 4];
+let newData2 = [...pre, 0, 10, 4];
 // console.log(newData2);
 
 //기존 ajax 통신코드
