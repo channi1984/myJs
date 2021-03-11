@@ -1,4 +1,4 @@
-//커링예제11111
+//커링예제
 var sumCurry = function (a, b) {
     return a + b;
 }
@@ -13,148 +13,125 @@ Function.prototype.curry = function () {
 }
 
 var sum15 = sumCurry.curry(15);
-
-console.log(sum15(5));
-//20
+// console.log(sum15(5));
 
 
 //배열 메소드
+
+//배열 끝에 요소를 제거한다.
 var arr = [1, 2, 3, 4];
 arr.pop();
-console.log(arr);
-//[1,2,3]
+// console.log(arr);
 
+//배열 끝에 요소를 추가한다.
 var arr = [1, 2, 3, 4];
 arr.push(5);
-console.log(arr);
-//[1,2,3,4,5]
+// console.log(arr);
 
+//배열 앞에 요소를 추가한다.
 var arr = [1, 2, 3, 4];
 arr.unshift(0);
-console.log(arr);
-//[0,1,2,3,4]
+// console.log(arr);
 
+//배열 앞에 요소를 제거한다.
 var arr = [1, 2, 3, 4];
 arr.shift();
-console.log(arr);
-//[2,3,4]
+// console.log(arr);
 
+ //4번째 자리부터 2자리 위까지 제거한다
 var arr = [1, 2, 3, 4, 5, 6, 7];
 arr.splice(3, 2);
-console.log(arr);
-//[1,2,3,6,7]
+// console.log(arr);
 
 var arr = [1, 2, 3, 4, 5, 6, 7];
 arr.splice(2, 1, "a", "b");
-console.log(arr);
-//[1,2,"a","b",4,5,6,7]
+// console.log(arr);
 
 var arr = [1, 2, 3, 4, 5, 6, 7];
 var newArr = arr.slice(3, 6);
-console.log(newArr);
-//[4,5,6]
+// console.log(newArr);
 
+ //arr2에 arr1을 합친다
 var arr1 = [1, 2, 3];
 var arr2 = [4, 5, 6];
 var arr3 = arr2.concat(arr1);
-console.log(arr3);
-//[4,5,6,1,2,3]
+// console.log(arr3);
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var isEven = function (value) {
     return value % 2 === 0;
 };
-console.log(arr.every(isEven));
-//false
+// console.log(arr.every(isEven));
 
 var arr = [1, 2, 3];
 arr.forEach(function (value) {
-    console.log(value);
+    // console.log(value);
 })
-//1
-//2
-//3
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var isEven = function (value) {
     return value % 2 === 0;
 }
 var newArr = arr.map(isEven);
-console.log(newArr);
-//[false, true, false, true, false, true, false, true, false, true]
+// console.log(newArr);
+
 var newArr2 = arr.filter(isEven);
-console.log(newArr2);
-//[2, 4, 6, 8, 10]
+// console.log(newArr2);
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var value = arr.reduce(function (previousValue, currentValue, index) {
     return previousValue + currentValue;
 });
-console.log(value);
-//55
+// console.log(value);
 
+//배열 요소 반전
 var arr = [1, 2, 3, 4];
 arr.reverse();
-console.log(arr);
-//[4, 3, 2, 1]
+// console.log(arr);
 
+//배열 정렬
 var arr = [13, 12, 11, 10, 5, 3, 2, 1];
 arr.sort();
-console.log(arr);
-//[1, 10, 11, 12, 13, 2, 3, 5]
+// console.log(arr);
 
+//배열 정렬 2
 var arr = [13, 12, 11, 10, 5, 3, 2, 1];
 arr.sort(function (a, b) {
     return a - b;
 })
-console.log(arr)
-//[1, 2, 3, 5, 10, 11, 12, 13]
+// console.log(arr)
+
 
 var arr = [1, 2, 3, 4];
-console.log(arr.toString());
-//1,2,3,4
+// console.log(arr.toString());
 
 var arr = [1, 2, 3, 4];
-console.log(arr.valueOf());
-//[1, 2, 3, 4]
+// console.log(arr.valueOf());
 
 var arr = [1, 2, 3, 4];
-console.log(arr.join());
-//1,2,3,4
-console.log(arr.join('+'));
-//1+2+3+4
-
+// console.log(arr.join());
+// console.log(arr.join('+'));
 
 //비구조화 할당
 var [a1, a2, ...rest_a] = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log(a1);
-//1
-console.log(a2);
-//2
-console.log(rest_a);
-//[3, 4, 5, 6, 7, 8, 9]
+// console.log(a1);
+// console.log(a2);
+// console.log(rest_a);
 
 var { a1, a2, ...rest_a } = { a1: 10, a2: 20, a3: 30, a4: 40 };
-console.log(a1);
-//10
-console.log(a2);
-//20
-console.log(rest_a);
-//{a3: 30, a4: 40}
+// console.log(a1);
+// console.log(a2);
+// console.log(rest_a);
 
 let pre = ["apply", "orange", 100];
 let newData = [...pre];
-console.log(pre);
-//["apply", "orange", 100]
-console.log(newData);
-//["apply", "orange", 100]
-console.log(newData === pre);
-//false
+// console.log(pre);
+// console.log(newData);
+// console.log(newData === pre);
 
 let pre2 = [100, "hello", null];
 let newData2 = [0, 10, ...pre, 4];
-console.log(newData2);
-//[0, 10, "apply", "orange", 100, 4]
+// console.log(newData2);
 
 //기존 ajax 통신코드
 // function getDate(callbackFunc) {
@@ -186,14 +163,12 @@ console.log(newData2);
 // })
 
 const myArray = [1, 2, 3, 4];
-console.log(myArray);
-//[1, 2, 3, 4]
+// console.log(myArray);
 
 const myArrayTimesTwo = myArray.map((value, index, array) => {
     return value * 2;
 });
-console.log(myArrayTimesTwo);
-//[2, 4, 6, 8]
+// console.log(myArrayTimesTwo);
 
 const songs = [
     { id: 1, name: "Curl of the Burl", artist: 'Mastodon' },
@@ -206,18 +181,15 @@ var allSongNames = songs.map(function (song) {
     return song.name.toLowerCase();
 })
 
-console.log(allSongNames);
-//["curl of the burl", "oblivion", "flying whales", "l'enfant sauvage"]
+// console.log(allSongNames);
 
 const myArray2 = [1, 2, 3, 4];
-console.log(myArray2);
-//[1, 2, 3, 4]
+// console.log(myArray2);
 
 const myEvenArray = myArray2.filter((value, index, array) => {
     return value % 2 === 0;
 });
-console.log(myEvenArray);
-//[2, 4]
+// console.log(myEvenArray);
 
 const myArray3 = [1, 2, 3, 4];
 
@@ -227,9 +199,7 @@ const sum = myArray3.reduce((acc, currValue, currIndex, array) => {
 
 const avg = sum / myArray3.length;
 
-console.log(avg);
-//2.5
-
+// console.log(avg);
 
 //Apply , Call
 obj1 = {
@@ -246,9 +216,7 @@ obj2 = {
     }
 }
 var result1 = obj1.getName();
-console.log(result1)
-//WEB
+// console.log(result1)
 
 var result2 = obj1.getName.call(obj2);
-console.log(result2)
-//FREE
+// console.log(result2)
