@@ -1,23 +1,3 @@
-//커링예제
-var sumCurry = function (a, b) {
-    return a + b;
-}
-
-Function.prototype.curry = function () {
-    var slice = Array.prototype.slice;
-    var args = slice.apply(arguments);
-    var that = this;
-    return function () {
-        return that.apply(null, args.concat(slice.apply(arguments)));
-    };
-}
-
-var sum15 = sumCurry.curry(15);
-// console.log(sum15(5));
-
-
-//배열 메소드
-
 //배열 끝에 요소를 제거한다.
 var arr = [1, 2, 3, 4];
 arr.pop();
@@ -251,3 +231,20 @@ let b = 1;
 const c = 1;
 //const c = 2; const는 재선언 불가능
 //c = 3 const는 재할당 불가능
+
+//커링예제
+var sumCurry = function (a, b) {
+    return a + b;
+}
+
+Function.prototype.curry = function () {
+    var slice = Array.prototype.slice;
+    var args = slice.apply(arguments);
+    var that = this;
+    return function () {
+        return that.apply(null, args.concat(slice.apply(arguments)));
+    };
+}
+
+var sum15 = sumCurry.curry(15);
+// console.log(sum15(5));
