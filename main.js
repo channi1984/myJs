@@ -1,3 +1,19 @@
+//변수 var let const
+var a = 1;
+var a = 2;
+
+let b = 1;
+//let b = 2; let은 재선언 불가능
+//b = 2; let은 재할당 가능
+
+const c = 1;
+//const c = 2; const는 재선언 불가능
+//c = 3 const는 재할당 불가능
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
 //배열 끝에 요소를 제거한다.
 var arr = [1, 2, 3, 4];
 arr.pop();
@@ -81,7 +97,6 @@ arr.sort(function (a, b) {
 })
 // console.log(arr)
 
-
 var arr = [1, 2, 3, 4];
 // console.log(arr.toString());
 
@@ -91,6 +106,10 @@ var arr = [1, 2, 3, 4];
 var arr = [1, 2, 3, 4];
 // console.log(arr.join());
 // console.log(arr.join('+'));
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
 //비구조화 할당
 var [a1, a2, ...rest_a] = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -103,6 +122,10 @@ var { a1, a2, ...rest_a } = { a1: 10, a2: 20, a3: 30, a4: 40 };
 // console.log(a2);
 // console.log(rest_a);
 
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
 //전개연산자
 let pre = ["apply", "orange", 100];
 let newData = [...pre];
@@ -114,36 +137,11 @@ let pre2 = [100, "hello", null];
 let newData2 = [...pre, 0, 10, 4];
 // console.log(newData2);
 
-//기존 ajax 통신코드
-// function getDate(callbackFunc) {
-//     $.get('url주소/products/1', function (response) {
-//         callbackFunc(response);
-//     });
-// }
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
-// getData(function (tableData) {
-//     console.log(tableData);
-// })
-
-//프로미스를 통한 ajax 통신
-// function getData() {
-//     return new Promise(function (resolve, reject) {
-//         $.get('url주소/product/1', function (response) {
-//             if (response) {
-//                 resolve(response);
-//             }
-//             reject(new Error("Request is failed"));
-//         });
-//     });
-// }
-
-// getData().then(function (data) {
-//     console.log(data);
-// }).catch(function (err) {
-//     console.error(err);
-// })
-
-//프로미스 코드2
+//프로미스
 var timeAttack = new Promise(function (resolve, reject) {
     setTimeout(function () {
         var ran = Math.random() * 10;
@@ -161,44 +159,9 @@ timeAttack.then(function (num) {
     // console.log('error');
 })
 
-const myArray = [1, 2, 3, 4];
-// console.log(myArray);
-
-const myArrayTimesTwo = myArray.map((value, index, array) => {
-    return value * 2;
-});
-// console.log(myArrayTimesTwo);
-
-const songs = [
-    { id: 1, name: "Curl of the Burl", artist: 'Mastodon' },
-    { id: 1, name: "Oblivion", artist: 'Mastodon' },
-    { id: 1, name: "Flying Whales", artist: 'Gojira' },
-    { id: 1, name: "L'Enfant Sauvage", artist: 'Gojira' },
-]
-
-var allSongNames = songs.map(function (song) {
-    return song.name.toLowerCase();
-})
-
-// console.log(allSongNames);
-
-const myArray2 = [1, 2, 3, 4];
-// console.log(myArray2);
-
-const myEvenArray = myArray2.filter((value, index, array) => {
-    return value % 2 === 0;
-});
-// console.log(myEvenArray);
-
-const myArray3 = [1, 2, 3, 4];
-
-const sum = myArray3.reduce((acc, currValue, currIndex, array) => {
-    return acc + currValue;
-}, 0);
-
-const avg = sum / myArray3.length;
-
-// console.log(avg);
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
 //Apply , Call
 obj1 = {
@@ -220,17 +183,9 @@ var result1 = obj1.getName();
 var result2 = obj1.getName.call(obj2);
 // console.log(result2)
 
-//var let const
-var a = 1;
-var a = 2;
-
-let b = 1;
-//let b = 2; let은 재선언 불가능
-//b = 2; let은 재할당 가능
-
-const c = 1;
-//const c = 2; const는 재선언 불가능
-//c = 3 const는 재할당 불가능
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 
 //커링예제
 var sumCurry = function (a, b) {
