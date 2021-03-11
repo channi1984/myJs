@@ -220,3 +220,15 @@ var result1 = obj1.getName();
 
 var result2 = obj1.getName.call(obj2);
 // console.log(result2)
+
+//var let const
+var a = 1;
+var a = 2;
+
+let b = 1;
+//let b = 2; let은 재선언 불가능
+//b = 2; let은 재할당 가능
+
+const c = 1;
+//const c = 2; const는 재선언 불가능
+//c = 3 const는 재할당 불가능
