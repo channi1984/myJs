@@ -38,7 +38,7 @@ var arr = [1, 2, 3, 4];
 arr.shift();
 // console.log(arr);
 
- //4번째 자리부터 2자리 위까지 제거한다
+//4번째 자리부터 2자리 위까지 제거한다
 var arr = [1, 2, 3, 4, 5, 6, 7];
 arr.splice(3, 2);
 // console.log(arr);
@@ -51,7 +51,7 @@ var arr = [1, 2, 3, 4, 5, 6, 7];
 var newArr = arr.slice(3, 6);
 // console.log(newArr);
 
- //arr2에 arr1을 합친다
+//arr2에 arr1을 합친다
 var arr1 = [1, 2, 3];
 var arr2 = [4, 5, 6];
 var arr3 = arr2.concat(arr1);
@@ -161,6 +161,24 @@ let newData2 = [0, 10, ...pre, 4];
 // }).catch(function (err) {
 //     console.error(err);
 // })
+
+//프로미스 코드2
+var timeAttack = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        var ran = Math.random() * 10;
+        if (ran >= 5) {
+            resolve(ran);
+        } else {
+            reject();
+        }
+    }, 1000);
+});
+
+timeAttack.then(function (num) {
+    // console.log(num + 'complete');
+}, function () {
+    // console.log('error');
+})
 
 const myArray = [1, 2, 3, 4];
 // console.log(myArray);
