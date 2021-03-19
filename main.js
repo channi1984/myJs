@@ -187,6 +187,59 @@ var result2 = obj1.getName.call(obj2);
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 
+//배열 깊은 복사
+var arr1 = [1, 2, 3, 4];
+var arr2 = arr1.slice();
+
+// console.log(arr1);
+// console.log(arr2);
+
+arr2[0] = 0;
+
+// console.log(arr1);
+// console.log(arr2);
+
+//객체 얕은 복사 (Object.assign)
+var person = {
+    age: 10,
+    name: {
+        first: 'channi',
+        last: 'son',
+    }
+}
+
+var copied = Object.assign({}, person)
+
+person.age = 1000
+person.name.first = 'dongchan'
+
+// console.log(copied.age);
+//객체 안의 객체까지 완전한 복사가 이루어 지지 않는다, 같이 변경된걸 볼 수 있다.
+// console.log(copied.name.first);
+// console.log(person === copied)
+
+//객체 얕은 복사 (ES6 전개연산자)
+var original = {
+    a: 1,
+    b: 2,
+    c: {
+        d: 3,
+    }
+}
+
+var copied = { ...original };
+
+original.a = 1000
+original.c.d = 3000
+
+// console.log(copied.a)
+//마찬가지로 객체 안의 객체까지 복사가 이루어 지지 않고 참조해 버린다.
+// console.log(copied.c.d)
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
 //커링예제
 var sumCurry = function (a, b) {
     return a + b;
